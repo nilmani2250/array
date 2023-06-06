@@ -1,0 +1,87 @@
+Bubble shorting using function:-
+#include<stdio.h>
+void bubble(int*,int);
+void array(int*,int);
+void main()
+{
+  int a[10],i,ele;
+  ele=sizeof(a)/sizeof(a[0]);
+  printf("Enter the array\n");
+  for(i=0;i<ele;i++)
+  scanf("%d",a+i);
+  
+  printf("Sorting array\n");
+  bubble(a,ele);
+  array(a,ele);
+}
+void bubble(int *a,int ele)
+{
+  int i,j,t;
+  for(i=0;i<ele-1;i++)             
+  {                                 
+    for(j=0;j<ele-1-i;j++)
+    {
+      if(a[j] > a[j+1])
+      {
+        t=a[j];
+        a[j]=a[j+1];
+        a[j+1]=t;
+      }
+     }
+   }
+ }
+ void array(int *a,int ele)
+ {
+  in i;
+    for(i=0;i<ele;i++)
+    printf("%d ",a[i]);
+    printf("\n");
+ }
+ 
+ 
+ Slection shorting:-
+ 
+ for(i=0;i<ele-1;i++)
+ {
+    for(j=i+1;j<ele;j++)
+    {
+      if(a[i] >a[j])
+      {
+          t=a[i];
+          a[i]=a[j];
+          a[j]=t;
+       }
+       
+    }
+ }
+ 
+ 
+ 
+ Array Reverse:-
+ #include<stdio.h>
+ void main()
+ {
+  int a[10],i,j,t,ele;
+  ele=sizeof(a)/sizeof(a[0]);
+  printf("Enter the array\n");
+  for(i=0;i<ele;i++)
+  scanf("%d",&a[i]);
+  
+  printf("Before reverse\n");
+  for(i=0;i<ele;i++)
+  printf("%d",a[i]);
+  printf("\n");
+  
+  for(i=0,j=ele-1;i<j;i++,j--)
+  {
+    t=a[i];
+    a[i]=a[j];
+    a[j]=t;
+   }
+   
+   printf("After reverse\n");
+   for(i=0;i<ele;i++)
+   printf("%d ",a[i]);
+   printf("\n");
+}
+ 
